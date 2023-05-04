@@ -22,25 +22,3 @@ class Example {
     }
 }
 ```
-
-```java
-import org.spokbjorn.tuple.Tuple;
-
-class Example {
-
-    public static void main(String[] args) {
-        List<Triad<String, String, Integer>> students = List.of(
-                Tuple.of("John", "Programming", 75),
-                Tuple.of("Jane", "History", 62),
-                Tuple.of("Peter", "Math", 59));
-        List<Duad<String, String>> namesWithCourse = students.stream()
-                .filter(student -> student.third() >= 60)
-                .map(student -> Tuple.of(student.first(), student.second()))
-                .toList();
-        System.out.println("Students who passed");
-        namesWithCourse.forEach(student -> {
-            System.out.printf("%s passed %s\n", student.first(), student.second());
-        });
-    }
-}
-```

@@ -8,7 +8,7 @@ group = "org.spokbjorn"
 version = "0.0.1-SNAPSHOT"
 
 dependencies {
-    compileOnly(libs.jetbrains.annotations)
+    api(libs.jetbrains.annotations)
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)

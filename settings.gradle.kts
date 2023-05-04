@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 }
 
 include("tuple")
+include("examples")
