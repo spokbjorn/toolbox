@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/toolbox.examples.main.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/toolbox.examples.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lazy/toolbox.lazy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lazy/toolbox.lazy.main.iml" />
     </modules>
   </component>
 </project>

@@ -10,3 +10,4 @@ dependencyResolutionManagement {
 
 include("tuple")
 include("examples")
+include("lazy")
