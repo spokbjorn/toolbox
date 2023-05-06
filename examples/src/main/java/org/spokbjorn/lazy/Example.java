@@ -6,7 +6,7 @@ import static org.spokbjorn.lazy.Lazy.lazy;
 
 public class Example {
 
-    public static final Lazy<String> lazy = lazy(() -> "Hello, World");
+    public static final Lazy<String> lazy = lazy(() -> "A".repeat(100_000_000));
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
