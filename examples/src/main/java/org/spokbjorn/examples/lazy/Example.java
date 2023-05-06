@@ -1,7 +1,8 @@
-package org.spokbjorn.lazy;
+package org.spokbjorn.examples.lazy;
 
 import java.util.Objects;
 import java.util.Scanner;
+import org.spokbjorn.lazy.Lazy;
 import static org.spokbjorn.lazy.Lazy.lazy;
 
 public class Example {

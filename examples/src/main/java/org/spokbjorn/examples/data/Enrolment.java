@@ -1,4 +1,4 @@
-package org.spokbjorn.example.data;
+package org.spokbjorn.examples.data;
 
 import java.util.List;
 

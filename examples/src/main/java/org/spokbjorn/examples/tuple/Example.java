@@ -1,7 +1,9 @@
-package org.spokbjorn.tuple;
+package org.spokbjorn.examples.tuple;
 
 import java.util.stream.Stream;
-import org.spokbjorn.example.data.Enrolment;
+import org.spokbjorn.examples.data.Enrolment;
+import org.spokbjorn.tuple.Triad;
+import org.spokbjorn.tuple.Tuple;
 
 public class Example {
 
