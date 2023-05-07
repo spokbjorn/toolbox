@@ -51,7 +51,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
      * @param <T> the type of the return value
      */
     @Contract(pure = true)
-    static <T>  @Unmodifiable @NotNull List<T> asList(@NotNull Unit unit) {
+    static <T> @Unmodifiable @NotNull List<T> asList(@NotNull Unit unit) {
         return Collections.emptyList();
     }
 

@@ -24,6 +24,20 @@ tasks.test {
 }
 
 publishing {
+    repositories {
+        maven {
+            credentials {
+                username = project.properties["ossrhUsername"].toString()
+                password = project.properties["ossrhPassword"].toString()
+            }
+
+            url = if (version.toString().endsWith("-SNAPSHOT")) {
+                uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+            } else {
+                uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+            }
+        }
+    }
     publications {
         create<MavenPublication>("lazy") {
             groupId = "org.spokbjorn"
@@ -46,20 +60,7 @@ publishing {
                     url.set("http://github.com/spokbjorn/toolbox")
                 }
             }
-            repositories {
-                maven {
-                    credentials {
-                        username = project.properties["ossrhUsername"].toString()
-                        password = project.properties["ossrhPassword"].toString()
-                    }
 
-                    url = if (version.toString().endsWith("-SNAPSHOT")) {
-                        uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-                    } else {
-                        uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-                    }
-                }
-            }
         }
     }
 }

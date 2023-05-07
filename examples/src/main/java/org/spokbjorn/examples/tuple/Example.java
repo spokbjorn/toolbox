@@ -25,7 +25,9 @@ public class Example {
                                 nameWithCourseAndIsPassingGrade.second()))
                 .toList();
         namesWithCourseWhichPassed.forEach(nameWithCourseWhichPassed ->
-                System.out.println("%s passed %s".formatted(nameWithCourseWhichPassed.first(), nameWithCourseWhichPassed.second())));
+                System.out.printf("%s passed %s%n",
+                        nameWithCourseWhichPassed.first(),
+                        nameWithCourseWhichPassed.second()));
     }
 
 }
