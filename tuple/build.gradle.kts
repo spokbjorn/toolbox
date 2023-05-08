@@ -1,7 +1,6 @@
 plugins {
     `java-library`
     `maven-publish`
-    signing
 }
 
 group = "org.spokbjorn"
@@ -45,8 +44,8 @@ publishing {
             repositories {
                 maven {
                     credentials {
-                        username = project.properties["ossrhUsername"].toString()
-                        password = project.properties["ossrhPassword"].toString()
+                        username = findProperty("ossrhUsername").toString()
+                        password = findProperty("ossrhPassword").toString()
                     }
 
                     url = if (version.toString().endsWith("-SNAPSHOT")) {
@@ -58,8 +57,4 @@ publishing {
             }
         }
     }
-}
-
-signing {
-    sign(publishing.publications["tuple"])
 }
