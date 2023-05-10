@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/toolbox.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/toolbox.buildSrc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/toolbox.examples.main.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/toolbox.examples.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lazy/toolbox.lazy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lazy/toolbox.lazy.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lazy/toolbox.lazy.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lazy/toolbox.lazy.test.iml" />
     </modules>
   </component>
 </project>

@@ -2,6 +2,7 @@ package org.spokbjorn.lazy;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -84,6 +85,34 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
             value = lazySupplier.get();
         }
         return value;
+    }
+
+    /**
+     * Returns a new {@link Lazy} instance that holds a lazily evaluated result of applying
+     * the given mapping function to the value held by this instance.
+     *
+     * <p>
+     * The mapping function is applied lazily when the value is first accessed through the
+     * new instance. If the mapping function is expensive to compute, this can provide
+     * significant performance benefits compared to computing the mapping eagerly and
+     * then creating a new {@link Lazy} instance.
+     * </p>
+     *
+     * <p>
+     * The type of the resulting {@link Lazy} instance is determined by the return type of
+     * the mapping function. The input type of the mapping function must be a super type of
+     * the type held by this instance.
+     * </p>
+     *
+     * @param function the mapping function to apply to the value held by this instance; must not be null
+     * @param <R> the type of the resulting {@link Lazy} instance
+     * @return a new {@link Lazy} instance that holds the lazily evaluated result of applying
+     * the given mapping function to the value held by this instance
+     * @throws NullPointerException if the given mapping function is null
+     */
+    public <R> Lazy<R> map(Function<? super T, ? extends R> function) {
+        Objects.requireNonNull(function);
+        return Lazy.of(() -> function.apply(get()));
     }
 
     /**
