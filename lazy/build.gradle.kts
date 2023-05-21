@@ -1,6 +1,5 @@
 plugins {
-    `java-library`
-    id("spokbjorn.publish")
+    id("spokbjorn.java-library")
 }
 
 group = "org.spokbjorn"

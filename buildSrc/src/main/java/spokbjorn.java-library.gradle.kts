@@ -1,7 +1,12 @@
-apply(plugin = "maven-publish")
+import java.util.Base64
 
-project.configure<PublishingExtension>() {
+plugins {
+    `java-library`
+    id("maven-publish")
+    signing
+}
 
+project.configure<PublishingExtension> {
     publications {
         create<MavenPublication>(project.name) {
             groupId = property("POM_GROUP_ID").toString()
@@ -59,5 +64,16 @@ project.configure<PublishingExtension>() {
                 }
             }
         }
+    }
+}
+
+project.configure<SigningExtension> {
+    if (hasProperty("signingKey") && hasProperty("signingPassword")) {
+        val decoder = Base64.getDecoder()
+        useInMemoryPgpKeys(
+            /* defaultSecretKey = */ String(decoder.decode(findProperty("signingKey").toString())),
+            /* defaultPassword = */ findProperty("signingPassword").toString()
+        )
+        sign(publishing.publications[project.name])
     }
 }
