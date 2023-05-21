@@ -2,8 +2,13 @@ import java.util.Base64
 
 plugins {
     `java-library`
-    id("maven-publish")
     signing
+    id("maven-publish")
+}
+
+project.configure<JavaPluginExtension> {
+    withJavadocJar()
+    withSourcesJar()
 }
 
 project.configure<PublishingExtension> {
