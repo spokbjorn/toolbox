@@ -10,6 +10,7 @@ package org.spokbjorn.tuple;
  * @param <V> the type of the value for the {@code third} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Triad<T, U, V>(
         T first, U second, V third

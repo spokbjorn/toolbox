@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
  *
  * @param <T> the type of value to be lazily initialized
  * @author ghostbear
- * @since 1
+ * @since 1.0.0
  */
 public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
 
@@ -28,6 +28,7 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
      * of {@link Lazy} is guaranteed to be non-null.
      * </p>
      *
+     * @since 1.0.0
      * @param <T> the type of value to be lazily initialized
      * @param supplier the supplier used to compute the value on-demand; must not be null
      * @return a new {@link Lazy} instance that uses the provided supplier to compute its value
@@ -48,6 +49,7 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
      * creates a new {@link Lazy} instance using the supplied {@link Supplier}.
      * </p>
      *
+     * @since 1.0.0
      * @param <T> the type of value to be lazily initialized
      * @param supplier the supplier used to compute the value on-demand; must not be null
      * @return a new {@link Lazy} instance that uses the provided supplier to compute its value
@@ -77,6 +79,7 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
      * method will return the cached value without calling the supplier again.
      * </p>
      *
+     * @since 1.0.0
      * @return the lazily initialized value
      */
     @Override
@@ -104,6 +107,7 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
      * the type held by this instance.
      * </p>
      *
+     * @since 1.0.0
      * @param function the mapping function to apply to the value held by this instance; must not be null
      * @param <R> the type of the resulting {@link Lazy} instance
      * @return a new {@link Lazy} instance that holds the lazily evaluated result of applying
@@ -125,6 +129,7 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
      * is performed using the {@link Objects#equals(Object, Object)} method.
      * </p>
      *
+     * @since 1.0.0
      * @param other the other {@link Lazy} instance to compare to; may be null
      * @return true if the two instances hold the same lazily initialized value, false otherwise
      */
@@ -142,6 +147,7 @@ public class Lazy<T> implements Supplier<T>, Comparable<T>, Serializable {
      * {@link Objects#equals(Object, Object)} method.
      * </p>
      *
+     * @since 1.0.0
      * @param other the object to compare to; may be null
      * @return true if the object holds the same value, false otherwise
      */

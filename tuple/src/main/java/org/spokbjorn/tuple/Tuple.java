@@ -10,12 +10,14 @@ import org.jetbrains.annotations.Unmodifiable;
  * Tuple is a finite-ordered list of elements.
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad, Quad, Triad, Unit {
 
     /**
      * Returns an unmodifiable list based on the tuple that is inputted.
      *
+     * @since 1.0.0
      * @param tuple the tuple to be converted
      * @return an unmodifiable list
      * @param <T> the type of the return value
@@ -46,6 +48,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns an empty unmodifiable list.
      *
+     * @since 1.0.0
      * @param unit the unit to be converted
      * @return an empty unmodifiable list
      * @param <T> the type of the return value
@@ -58,6 +61,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns an unmodifiable list of the value in the monad.
      *
+     * @since 1.0.0
      * @param monad the monad to be converted
      * @return an unmodifiable list of the value in the monad
      * @param <T> the type of the return value
@@ -69,6 +73,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns an unmodifiable list of all the values in the duad.
      *
+     * @since 1.0.0
      * @param duad the duad to be converted
      * @return an unmodifiable list of all the values in the duad
      * @param <T> the type of the return value
@@ -80,6 +85,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns an unmodifiable list of all the values in the triad.
      *
+     * @since 1.0.0
      * @param triad the triad to be converted
      * @return an unmodifiable list of all the values in the triad
      * @param <T> the type of the return value
@@ -91,61 +97,76 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns an unmodifiable list of all the values in the quad.
      *
+     * @since 1.0.0
      * @param quad the quad to be converted
      * @return an unmodifiable list of all the values in the quad
      * @param <T> the type of the return value
      */
-    static <T> @Unmodifiable @NotNull List<T> asList(@NotNull Quad<? extends T, ? extends T, ? extends T, ? extends T> quad) {
+    static <T> @Unmodifiable @NotNull List<T> asList(
+            @NotNull Quad<? extends T, ? extends T, ? extends T, ? extends T> quad) {
         return List.of(quad.first(), quad.second(), quad.third(), quad.fourth());
     }
 
     /**
      * Returns an unmodifiable list of all the values in the pentad.
      *
+     * @since 1.0.0
      * @param pentad the pentad to be converted
      * @return an unmodifiable list of all the values in the pentad
      * @param <T> the type of the return value
      */
-    static <T> @Unmodifiable @NotNull List<T> asList(@NotNull Pentad<? extends T, ? extends T, ? extends T, ? extends T, ? extends T> pentad) {
+    static <T> @Unmodifiable @NotNull List<T> asList(
+            @NotNull Pentad<? extends T, ? extends T, ? extends T, ? extends T, ? extends T> pentad) {
         return List.of(pentad.first(), pentad.second(), pentad.third(), pentad.fourth(), pentad.fifth());
     }
 
     /**
      * Returns an unmodifiable list of all the values in the hexad.
      *
+     * @since 1.0.0
      * @param hexad the duad to be converted
      * @return an unmodifiable list of all the values in the hexad
      * @param <T> the type of the return value
      */
-    static <T> @Unmodifiable @NotNull List<T> asList(@NotNull Hexad<? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T> hexad) {
+    static <T> @Unmodifiable @NotNull List<T> asList(
+            @NotNull Hexad<? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T> hexad) {
         return List.of(hexad.first(), hexad.second(), hexad.third(), hexad.fourth(), hexad.fifth(), hexad.sixth());
     }
 
     /**
      * Returns an unmodifiable list of all the values in the heptad.
      *
+     * @since 1.0.0
      * @param heptad the heptad to be converted
      * @return an unmodifiable list of all the values in the heptad
      * @param <T> the type of the return value
      */
-    static <T> @Unmodifiable @NotNull List<T> asList(@NotNull Heptad<? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T> heptad) {
-        return List.of(heptad.first(), heptad.second(), heptad.third(), heptad.fourth(), heptad.fifth(), heptad.sixth(), heptad.seventh());
+    static <T> @Unmodifiable @NotNull List<T> asList(
+            @NotNull Heptad<? extends T, ? extends T, ? extends T, ? extends T,
+                    ? extends T, ? extends T, ? extends T> heptad) {
+        return List.of(heptad.first(), heptad.second(), heptad.third(), heptad.fourth(),
+                heptad.fifth(), heptad.sixth(), heptad.seventh());
     }
 
     /**
      * Returns an unmodifiable list of all the values in the octad.
      *
+     * @since 1.0.0
      * @param octad the octad to be converted
      * @return an unmodifiable list of all the values in the octad
      * @param <T> the type of the return value
      */
-    static <T> @Unmodifiable @NotNull List<T> asList(@NotNull Octad<? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T, ? extends T> octad) {
-        return List.of(octad.first(), octad.second(), octad.third(), octad.fourth(), octad.fifth(), octad.sixth(), octad.seventh(), octad.eighth());
+    static <T> @Unmodifiable @NotNull List<T> asList(
+            @NotNull Octad<? extends T, ? extends T, ? extends T, ? extends T,
+                    ? extends T, ? extends T, ? extends T, ? extends T> octad) {
+        return List.of(octad.first(), octad.second(), octad.third(), octad.fourth(),
+                octad.fifth(), octad.sixth(), octad.seventh(), octad.eighth());
     }
 
     /**
      * Returns an empty tuple instance.
      *
+     * @since 1.0.0
      * @return an empty tuple instance
      */
     @Contract(" -> new")
@@ -156,6 +177,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns a monad instance.
      *
+     * @since 1.0.0
      * @return a monad instance
      * @param <T> the type of the {@code first} value
      */
@@ -167,6 +189,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns a duad instance.
      *
+     * @since 1.0.0
      * @return a duad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -179,6 +202,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns a triad instance.
      *
+     * @since 1.0.0
      * @return a triad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -192,6 +216,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns a quad instance.
      *
+     * @since 1.0.0
      * @return a quad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -206,6 +231,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns a pentad instance.
      *
+     * @since 1.0.0
      * @return a pentad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -221,6 +247,7 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
     /**
      * Returns a hexad instance.
      *
+     * @since 1.0.0
      * @return a hexad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -230,13 +257,15 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
      * @param <Y> the type of the {@code sixth} value
      */
     @Contract("_, _, _, _, _, _ -> new")
-    static <T, U, V, W, X, Y> @NotNull Hexad<T, U, V, W, X, Y> of(T first, U second, V third, W fourth, X fifth, Y sixth) {
+    static <T, U, V, W, X, Y> @NotNull Hexad<T, U, V, W, X, Y> of(
+            T first, U second, V third, W fourth, X fifth, Y sixth) {
         return new Hexad<>(first, second, third, fourth, fifth, sixth);
     }
 
     /**
      * Returns a heptad instance.
      *
+     * @since 1.0.0
      * @return a heptad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -247,13 +276,15 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
      * @param <Z> the type of the {@code seventh} value
      */
     @Contract("_, _, _, _, _, _, _ -> new")
-    static <T, U, V, W, X, Y, Z> @NotNull Heptad<T, U, V, W, X, Y, Z> of(T first, U second, V third, W fourth, X fifth, Y sixth, Z seventh) {
+    static <T, U, V, W, X, Y, Z> @NotNull Heptad<T, U, V, W, X, Y, Z> of(
+            T first, U second, V third, W fourth, X fifth, Y sixth, Z seventh) {
         return new Heptad<>(first, second, third, fourth, fifth, sixth, seventh);
     }
 
     /**
      * Returns a octad instance.
      *
+     * @since 1.0.0
      * @return a octad instance
      * @param <T> the type of the {@code first} value
      * @param <U> the type of the {@code second} value
@@ -265,7 +296,8 @@ public sealed interface Tuple permits Duad, Heptad, Hexad, Monad, Octad, Pentad,
      * @param <A> the type of the {@code eighth} value
      */
     @Contract("_, _, _, _, _, _, _, _ -> new")
-    static <T, U, V, W, X, Y, Z, A> @NotNull Octad<T, U, V, W, X, Y, Z, A> of(T first, U second, V third, W fourth, X fifth, Y sixth, Z seventh, A eighth) {
+    static <T, U, V, W, X, Y, Z, A> @NotNull Octad<T, U, V, W, X, Y, Z, A> of(
+            T first, U second, V third, W fourth, X fifth, Y sixth, Z seventh, A eighth) {
         return new Octad<>(first, second, third, fourth, fifth, sixth, seventh, eighth);
     }
 

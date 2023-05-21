@@ -15,6 +15,7 @@ package org.spokbjorn.tuple;
  * @param <A> the type of the value for the {@code eighth} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Octad<T, U, V, W, X, Y, Z, A>(
         T first, U second, V third, W fourth, X fifth, Y sixth, Z seventh, A eighth

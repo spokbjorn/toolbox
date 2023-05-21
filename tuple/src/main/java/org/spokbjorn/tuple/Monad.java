@@ -8,6 +8,7 @@ package org.spokbjorn.tuple;
  * @param <T> the type of the value for the {@code first} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Monad<T>(
         T first

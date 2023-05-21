@@ -4,10 +4,6 @@
         "https://checkstyle.org/dtds/suppressions_1_2.dtd">
 <suppressions>
     <suppress checks="LineLength"
-              files="Tuple.java"
-              lines="98,109,120,131,132,142,143,233,250,268"/>
-
-    <suppress checks="LineLength"
               files="lazy/package-info.java"
               lines="34,65,99"/>
 </suppressions>

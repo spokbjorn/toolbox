@@ -9,6 +9,7 @@ package org.spokbjorn.tuple;
  * @param <U> the type of the value for the {@code second} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Duad<T, U>(
         T first, U second

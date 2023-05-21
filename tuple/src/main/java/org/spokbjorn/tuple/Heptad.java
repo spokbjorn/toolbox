@@ -14,6 +14,7 @@ package org.spokbjorn.tuple;
  * @param <Z> the type of the value for the {@code seventh} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Heptad<T, U, V, W, X, Y, Z>(
         T first, U second, V third, W fourth, X fifth, Y sixth, Z seventh

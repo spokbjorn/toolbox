@@ -13,6 +13,7 @@ package org.spokbjorn.tuple;
  * @param <Y> the type of the value for the {@code sixth} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Hexad<T, U, V, W, X, Y>(
         T first, U second, V third, W fourth, X fifth, Y sixth

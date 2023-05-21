@@ -12,6 +12,7 @@ package org.spokbjorn.tuple;
  * @param <X> the type of the value for the {@code fifth} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Pentad<T, U, V, W, X>(
         T first, U second, V third, W fourth, X fifth

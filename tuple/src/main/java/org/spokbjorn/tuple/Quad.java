@@ -11,6 +11,7 @@ package org.spokbjorn.tuple;
  * @param <W> the type of the value for the {@code fourth} parameter
  *
  * @author ghostbear
+ * @since 1.0.0
  */
 public record Quad<T, U, V, W>(
         T first, U second, V third, W fourth
