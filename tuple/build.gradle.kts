@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "org.spokbjorn"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.1-SNAPSHOT"
 
 dependencies {
     api(libs.jetbrains.annotations)
